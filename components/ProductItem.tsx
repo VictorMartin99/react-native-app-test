@@ -12,9 +12,9 @@ const ProductItem: React.FC<Props> = ({ product, onPress }: Props) => {
   const { width } = useWindowDimensions();
 
   return (
-    <TouchableOpacity onPress={() => onPress(product)}>
-      <Surface style={{ alignContent: 'center', margin: 5, backgroundColor: '#439A97', borderRadius: 10, borderColor: 'black', borderWidth: 1 }}>
-        <View style={{ flexDirection: 'row' }}>
+    <TouchableOpacity testID="email-input" onPress={() => onPress(product)}>
+      <Surface style={{ alignContent: 'center', margin: 5, backgroundColor: '#439A97', borderRadius: 10, borderColor: 'black', borderWidth: 1}}>
+        <View style={{ flexDirection: 'row'}}>
           <Image resizeMode='contain' style={{ width: 200, height: 200, margin: 10, borderRadius: 20, alignSelf: 'center', backgroundColor: 'white' }} source={{ uri: product.thumbnail }} />
           <View style={{ justifyContent: 'center', alignItems: 'flex-start', maxWidth: width - 240 }}>
             <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white', marginBottom: 10, flexWrap: 'wrap' }}>{product.title}</Text>

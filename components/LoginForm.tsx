@@ -7,7 +7,8 @@ import {
   Text,
 } from "react-native";
 import Logo from "./Logo";
-import {styles} from "../style/LoginFormStyle";
+import { styles } from "../style/LoginFormStyle";
+import { Alert } from "react-native";
 
 interface Props {
   onLogin: (email: string, password: string) => void;
@@ -19,8 +20,8 @@ const LoginForm = ({ onLogin }: Props) => {
 
   const handleLogin = () => {
     if (!email || !password) {
-      alert("Please fill in all fields");
-      return;
+      Alert.alert("Please fill in all fields");
+      return new Error("Can't login there's not email or password");
     }
     onLogin(email, password);
   };
@@ -31,6 +32,7 @@ const LoginForm = ({ onLogin }: Props) => {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
+          testID="email-input"
           placeholder="Email"
           keyboardType="email-address"
           autoCapitalize="none"
@@ -39,13 +41,14 @@ const LoginForm = ({ onLogin }: Props) => {
         />
         <TextInput
           style={styles.input}
+          testID="password-input"
           placeholder="Password"
           secureTextEntry
           autoCapitalize="none"
           onChangeText={setPassword}
           value={password}
         />
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <TouchableOpacity style={styles.button} testID="login-button" onPress={handleLogin}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
       </View>

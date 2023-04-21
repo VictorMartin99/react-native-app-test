@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import LoginForm from '../components/LoginForm';
 import { styles } from '../style/LoginScreenStyle'
 
