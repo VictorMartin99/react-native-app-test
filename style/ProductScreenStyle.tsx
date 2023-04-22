@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from "react-native";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,7 +13,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
   greetingText: {
-    fontSize: 20,
+    fontSize: windowWidth * 0.05,
     fontWeight: 'bold',
   },
 });

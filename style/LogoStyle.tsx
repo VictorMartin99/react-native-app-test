@@ -1,23 +1,26 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    justifyContent: "center",
     position: "absolute",
-    top: 80,
+    top: windowHeight * 0.03,
   },
   text: {
     fontWeight: "bold",
-    fontSize: 50,
+    fontSize: windowWidth * 0.1,
     color: "#439A97",
-    marginBottom: 20,
+    marginBottom: windowHeight * 0.05,
   },
   image: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
+    width: windowWidth * 0.5,
+    height: windowWidth * 0.5,
+    borderRadius: windowWidth * 0.25,
     borderColor: "#439A97",
-    borderWidth: 3,
+    borderWidth: windowWidth * 0.03,
   },
 });
-

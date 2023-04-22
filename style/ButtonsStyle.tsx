@@ -1,4 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
   button: {
@@ -11,6 +14,6 @@ export const styles = StyleSheet.create({
   },
   buttonTitle: {
     fontWeight: "bold",
-    fontSize: 16,
+    fontSize: windowWidth * 0.04,
   },
 });

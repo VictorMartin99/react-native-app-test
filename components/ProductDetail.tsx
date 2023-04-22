@@ -30,7 +30,7 @@ const ProductDetail: React.FC<Props> = ({
       />
       <View style={styles.titleAndPriceContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.price}>${price.toFixed(2)}</Text>
+        <Text style={styles.price}>{price.toFixed(2)}€</Text>
       </View>
       <Text style={styles.description}>{description}</Text>
     </Surface>

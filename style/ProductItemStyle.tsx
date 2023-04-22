@@ -1,31 +1,33 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
   surface: {
     alignContent: 'center',
-    margin: 5,
+    margin: windowWidth * 0.05,
     backgroundColor: '#439A97',
-    borderRadius: 10,
+    borderRadius: windowWidth * 0.1,
     borderColor: 'black',
     borderWidth: 1,
   },
   image: {
-    width: 200,
-    height: 200,
-    margin: 10,
-    borderRadius: 20,
+    width: windowWidth * 0.4,
+    height: windowWidth * 0.4,
+    margin: windowWidth * 0.05,
+    borderRadius: windowWidth * 0.1,
     alignSelf: 'center',
     backgroundColor: 'white',
   },
   title: {
-    fontSize: 20,
+    fontSize: windowWidth * 0.05,
     fontWeight: 'bold',
     color: 'white',
-    marginBottom: 10,
+    marginBottom: windowWidth * 0.02,
     flexWrap: 'wrap',
   },
   price: {
-    fontSize: 16,
+    fontSize: windowWidth * 0.04,
     fontWeight: 'bold',
     color: 'white',
   },

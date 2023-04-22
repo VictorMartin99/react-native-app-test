@@ -22,7 +22,7 @@ const ProductItem: React.FC<Props> = ({ product, onPress }: Props) => {
           <Image resizeMode='contain' style={styles.image} source={{ uri: product.thumbnail }} />
           <View style={{ justifyContent: 'center', alignItems: 'flex-start', maxWidth: width - 240 }}>
             <Text style={styles.title}>{product.title}</Text>
-            <Text style={styles.price}>${product.price}</Text>
+            <Text style={styles.price}>{product.price}€</Text>
           </View>
         </View>
       </Surface>

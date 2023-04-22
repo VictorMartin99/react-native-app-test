@@ -2,7 +2,7 @@ import React from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import LoginForm from '../components/LoginForm';
 
-// Importing styles from LoginScreenStyle file
+// Importing styles from DetailScreenStyle file
 import { styles } from '../style/LoginScreenStyle'
 
 // Declare the Props interface
