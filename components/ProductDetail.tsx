@@ -1,9 +1,11 @@
 import React from "react";
 import { Surface } from "@react-native-material/core";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
+// Importing styles from ProductDetailStyle file
 import { styles } from "../style/ProductDetailStyle"
 
+// Define the props for the component
 interface Props {
   title: string;
   description: string;
@@ -11,12 +13,14 @@ interface Props {
   thumbnail: string;
 }
 
+// Define the ProductDetail component as a functional component that takes in the Props defined above
 const ProductDetail: React.FC<Props> = ({
   title,
   description,
   price,
   thumbnail,
 }: Props) => {
+  // Render the component UI
   return (
     <Surface style={styles.surface}>
       <Image
@@ -33,4 +37,5 @@ const ProductDetail: React.FC<Props> = ({
   );
 };
 
+// Export the ProductDetail component as the default export
 export default ProductDetail;

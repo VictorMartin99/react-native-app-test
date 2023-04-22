@@ -1,16 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
+  surface: {
     alignContent: 'center',
     margin: 5,
     backgroundColor: '#439A97',
     borderRadius: 10,
     borderColor: 'black',
     borderWidth: 1,
-  },
-  row: {
-    flexDirection: 'row',
   },
   image: {
     width: 200,
@@ -19,11 +16,6 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     alignSelf: 'center',
     backgroundColor: 'white',
-  },
-  info: {
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    maxWidth: '80%',
   },
   title: {
     fontSize: 20,
